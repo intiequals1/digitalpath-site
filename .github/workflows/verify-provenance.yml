@@ -1,0 +1,37 @@
+name: Verify ML-DSA Provenance
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-ml-dsa-provenance:
+    name: Verify ML-DSA Provenance
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Check out full Git history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Check OpenSSL and Python
+        run: |
+          openssl version
+          python3 --version
+
+      - name: Verify signed snapshot
+        shell: bash
+        env:
+          PROVENANCE_PUBLIC_KEY_SHA256: ${{ vars.PROVENANCE_PUBLIC_KEY_SHA256 }}
+        run: |
+          if compgen -G 'provenance/attestations/attestation-*.json' > /dev/null; then
+            python3 scripts/provenance/verify_attestations.py --require-anchor
+          else
+            echo '::warning::ML-DSA provenance is not activated. Generate and independently pin the maintainer key, then sign a snapshot.'
+            echo '## ML-DSA provenance not yet activated' >> "$GITHUB_STEP_SUMMARY"
+            echo 'No signed snapshot is present yet. See `provenance/README.md` for the one-time setup.' >> "$GITHUB_STEP_SUMMARY"
+          fi

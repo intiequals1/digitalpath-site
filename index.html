@@ -24,6 +24,17 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
   </style>
+  <style>
+    .contribute-section{padding-top:4px;padding-bottom:104px}
+    .contribute-inner{background:#e8e9df;border:1px solid var(--line);padding:42px clamp(22px,5vw,64px);display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;align-items:start}
+    .contribute-inner h2{font:600 clamp(32px,4vw,46px)/1.08 var(--display);letter-spacing:-2px;margin:0}
+    .contribute-inner h2 em{font-family:var(--serif);font-weight:400;letter-spacing:-2px}
+    .contribute-copy{max-width:590px}
+    .contribute-copy p{font-size:12px;line-height:1.8;color:#5f6a62;margin:0 0 14px}
+    .contribute-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px}
+    .contribute-note{font:10px var(--mono);color:#718074;margin-top:16px!important}
+    @media(max-width:700px){.contribute-section{padding-bottom:75px}.contribute-inner{grid-template-columns:1fr;gap:24px;padding:28px 22px}}
+  </style>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -36,6 +47,7 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen"><span></span><span></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Hauptnavigation">
       <a class="nav-active" href="#labor">Projektlabor</a>
+      <a href="#mitmachen">Mitwirken</a>
       <a href="#methode">Arbeitsweise</a>
       <a href="#profil">Über mich</a>
       <a class="nav-contact" href="#kontakt">Austausch anfragen <span aria-hidden="true">↗</span></a>
@@ -114,6 +126,18 @@
       <p class="lab-footnote"><span class="footnote-icon">i</span> Projektname und Themenzuordnung sind eine Orientierung. Ein Konzept ist kein validiertes Ergebnis — jeder dokumentierte Stand wird als solcher gekennzeichnet.</p>
     </section>
 
+    <section class="contribute-section section-pad" id="mitmachen" aria-labelledby="contribute-title">
+      <div class="contribute-inner">
+        <div><p class="eyebrow">Offene Zusammenarbeit</p><h2 id="contribute-title">Eine gute Aufgabe?<br><em>Mach mit.</em></h2></div>
+        <div class="contribute-copy">
+          <p>Freigegebene öffentliche Aufgaben und Vorschläge werden als GitHub-Issues gesammelt. Du kannst Fragen stellen, eine Aufgabe übernehmen und Änderungen als Pull Request einreichen.</p>
+          <p>Für Issues, Kommentare und Pull Requests brauchst du ein GitHub-Konto. Inhalte und Beiträge sind öffentlich. Jira bleibt intern: Es gibt keine automatische 1:1-Spiegelung; nur ausdrücklich freigegebene und redigierte Aufgaben werden veröffentlicht.</p>
+          <div class="contribute-actions"><a class="button button-dark" href="https://github.com/intiequals1/digitalpath-site/issues">Zu GitHub Issues <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/intiequals1/digitalpath-site/blob/main/CONTRIBUTING.md">Beitragsregeln <span aria-hidden="true">↗</span></a></div>
+          <p class="contribute-note">Bitte keine Jira-IDs, internen Links, Kunden- oder Personendaten veröffentlichen. KI-Unterstützung bei Beiträgen bitte offenlegen.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="method-section section-pad" id="methode" aria-labelledby="method-title">
       <div class="method-heading"><p class="eyebrow">02 / Die Arbeitsweise</p><h2 id="method-title">Nicht nur das Ergebnis.<br><em>Auch der Weg dorthin.</em></h2><p>Ein Projekt wird nachvollziehbar, wenn sichtbar bleibt, worauf es beruht und was noch ungeklärt ist.</p></div>
       <div class="method-steps">
@@ -136,6 +160,6 @@
     </section>
   </main>
 
-  <footer class="site-footer"><a class="wordmark footer-mark" href="#start"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>digital<span class="wordmark-light">path</span></span></a><span>Digitale Systeme verständlich, nachvollziehbar und verantwortbar gestalten.</span><div class="footer-links"><a href="mailto:claudiu@dangulea.at">Kontakt</a><a href="https://www.dangulea.at" target="_blank" rel="noreferrer">dangulea.at ↗</a><a href="#start">Nach oben ↑</a></div><small>© <span id="year">2026</span> Claudiu Dangulea · Konzepte, Prototypen und validierte Ergebnisse werden als solche bezeichnet.</small></footer>
+  <footer class="site-footer"><a class="wordmark footer-mark" href="#start"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>digital<span class="wordmark-light">path</span></span></a><span>Digitale Systeme verständlich, nachvollziehbar und verantwortbar gestalten.</span><div class="footer-links"><a href="mailto:claudiu@dangulea.at">Kontakt</a><a href="https://www.dangulea.at" target="_blank" rel="noreferrer">dangulea.at ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/AI_USAGE.md">KI-Offenlegung ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/PROVENANCE.md">Provenienz ↗</a><a href="#start">Nach oben ↑</a></div><small>© <span id="year">2026</span> Claudiu Dangulea · Mit KI-Unterstützung von Manus erstellt; Projektverantwortung: Claudiu Dangulea. Konzepte, Prototypen und validierte Ergebnisse werden als solche bezeichnet.</small></footer>
 </body>
 </html>

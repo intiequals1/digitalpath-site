@@ -2,3 +2,8 @@
 Thumbs.db
 .vscode/
 .idea/
+
+# Private ML-DSA signing keys must never be committed.
+provenance/keys/*.private.pem
+provenance/keys/maintainer-ml-dsa65.pem
+*.secret.pem

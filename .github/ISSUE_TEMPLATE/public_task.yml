@@ -1,0 +1,60 @@
+name: Öffentliche Mitwirkungsaufgabe
+description: Eine freigegebene, öffentliche Aufgabe vorschlagen oder bearbeiten
+title: "[Aufgabe] "
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Öffentliche GitHub-Issues sind für alle sichtbar. Jira bleibt intern. Bitte keine Jira-Schlüssel, internen Links, internen Beschreibungen, Kundendaten oder personenbezogenen Daten eintragen.
+  - type: dropdown
+    id: project_area
+    attributes:
+      label: Projektbereich
+      options:
+        - Projektlabor-Website
+        - EMILMA
+        - Wattlize
+        - MedCirc
+        - CWVP
+        - Pertion
+        - Ethics4All
+        - Virtual User AI
+        - Knowledge Management Hub
+        - SAP Invoice-to-PO Matching
+        - Enterprise Checkout Engine
+        - Allgemeine Dokumentation
+        - Noch offen
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Öffentliche Aufgabenbeschreibung
+      description: Beschreibe nur den freigegebenen öffentlichen Arbeitsumfang.
+      placeholder: Was soll geändert oder untersucht werden?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Ergebnis / Abnahmekriterien
+      description: Woran ist erkennbar, dass die Aufgabe abgeschlossen ist?
+    validations:
+      required: true
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Datenschutz und Vertraulichkeit
+      options:
+        - label: Ich habe keine internen Jira-IDs, Jira-Links, vertraulichen Inhalte oder personenbezogenen Daten eingefügt.
+          required: true
+  - type: dropdown
+    id: ai_use
+    attributes:
+      label: KI-Unterstützung
+      description: Für Vorschläge und Beiträge gilt die Offenlegungspflicht im Repository.
+      options:
+        - Keine generative KI verwendet
+        - Generative KI verwendet; Werkzeug und Umfang im Issue erläutert
+    validations:
+      required: true
