@@ -10,12 +10,12 @@ Es werden keine Pakete benötigt. Im Projektordner kann die Seite beispielsweise
 python3 -m http.server 8000
 ```
 
-Dann `http://localhost:8000` im Browser öffnen. Alternativ lässt sich `index.html` direkt öffnen.
+Dann `http://localhost:8000` im Browser öffnen. Das CSS ist direkt in `index.html` eingebettet, damit die Gestaltung auch dann erhalten bleibt, wenn nur die HTML-Datei in einer Einzeldatei-Vorschau geöffnet wird. Die begleitende `styles.css` ist die separate, leichter bearbeitbare Fassung der Gestaltungsregeln.
 
 ## Aufbau
 
-- `index.html` — Seiteninhalt, Navigation und Projektübersicht
-- `styles.css` — responsive Gestaltung, Layout und Interaktionszustände
+- `index.html` — eigenständig gestaltete Startseite mit eingebettetem CSS, Inhalt, Navigation und Projektübersicht
+- `styles.css` — separate Fassung der responsiven Gestaltung
 - `script.js` — Themenfilter und mobile Navigation
 - `assets/lab-banner.jpg` — bereitgestelltes abstraktes Linienmotiv
 - `assets/favicon.svg` — Digitalpath-Wortbildmarke
