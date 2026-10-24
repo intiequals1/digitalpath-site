@@ -14,7 +14,7 @@ Dann `http://localhost:8000` im Browser öffnen. Das CSS ist direkt in `index.ht
 
 ## Mitwirken
 
-Freigegebene öffentliche Aufgaben werden als GitHub-Issues veröffentlicht. Zum Eröffnen oder Kommentieren eines Issues und zum Einreichen eines Pull Requests ist ein GitHub-Konto nötig. Issue-Inhalte und Beiträge sind öffentlich. Jira bleibt intern: Aufgaben werden redigiert und nur nach ausdrücklicher Freigabe übernommen; es gibt keine automatische Jira-Synchronisierung. Lies vor dem Beitrag [`CONTRIBUTING.md`](CONTRIBUTING.md) und verwende die [öffentliche Aufgaben-Vorlage](.github/ISSUE_TEMPLATE/public_task.yml). Keine Jira-Schlüssel, internen Links oder vertraulichen Inhalte veröffentlichen.
+Freigegebene öffentliche Aufgaben werden im [öffentlichen GitHub-Projektboard](https://github.com/users/intiequals1/projects/6) gesammelt und als GitHub-Issues bearbeitet. Zum Eröffnen oder Kommentieren eines Issues und zum Einreichen eines Pull Requests ist ein GitHub-Konto nötig. Issue-Inhalte und Beiträge sind öffentlich. Jira bleibt intern: Aufgaben werden redigiert und nur nach ausdrücklicher Freigabe übernommen; es gibt keine automatische Jira-Synchronisierung. Lies vor dem Beitrag [`CONTRIBUTING.md`](CONTRIBUTING.md) und verwende die [öffentliche Aufgaben-Vorlage](.github/ISSUE_TEMPLATE/public_task.yml). Keine Jira-Schlüssel, internen Links oder vertraulichen Inhalte veröffentlichen.
 
 ## KI-Offenlegung und Provenienz
 
