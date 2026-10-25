@@ -10,7 +10,7 @@ Die Projektverantwortlichen entscheiden, ob ein Vorschlag öffentlich und umsetz
 
 ## Dialektische Issues (Entwurf)
 
-Neben Aufgaben gibt es eine zweite Issue-Vorlage: das [dialektische Issue](https://github.com/intiequals1/digitalpath-site/issues/new?template=dialectical_issue.yml). Damit wird ein Problem als gemeinsamer Untersuchungsgegenstand festgehalten, mit Ausgangsposition, Kritik und Widerspruch, Vermittlung, praktischer Überprüfung und Reflexion. Grundlage ist der Konzeptentwurf [Dialectical Collaboration Network](https://www.claudiu.at/digitalpath-dialectical-collaboration-network) (Fassung 0.1, 25. Oktober 2026). Abweichende Positionen werden dokumentiert, Kritik richtet sich gegen Aussagen und nicht gegen Personen, und niemand ist verpflichtet, Ergebnisse in der eigenen Praxis umzusetzen.
+Neben Aufgaben gibt es eine zweite Issue-Vorlage: das [dialektische Issue](https://github.com/intiequals1/digitalpath-site/issues/new?template=dialectical_issue.yml). Damit wird ein Problem als gemeinsamer Untersuchungsgegenstand festgehalten, mit Ausgangsposition, Kritik und Widerspruch, Vermittlung, praktischer Überprüfung und Reflexion. Grundlage ist der Konzeptentwurf [Dialectical Collaboration Network](https://www.claudiu.at/digitalpath-dialectical-collaboration-network) (Fassung 0.1, 25. Oktober 2026). Gemeinsamer Einstieg mit Diskussionen und Decision Records ist das Repository [DigitalPath Commons](https://github.com/intiequals1/digitalpath-commons). Abweichende Positionen werden dokumentiert, Kritik richtet sich gegen Aussagen und nicht gegen Personen, und niemand ist verpflichtet, Ergebnisse in der eigenen Praxis umzusetzen.
 
 ## Mitwirken ohne GitHub-Konto
 
