@@ -6,6 +6,8 @@
 
 Manus, ein KI-Assistent, unterstützte am 23. Oktober 2026 bei Konzept, Textentwurf, HTML, CSS, JavaScript, Projekt-Dokumentation, Tests sowie Provenienz- und Beitragswerkzeugen. Das zugrunde liegende Modell und eine Modellversionsnummer wurden in diesem Arbeitsablauf nicht bereitgestellt und werden deshalb nicht behauptet. Bestehende lokale Projektmedien wurden übernommen; ihre ursprüngliche Erstellungsart wird hier nicht als KI-generiert oder nicht-KI-generiert eingestuft.
 
+Claude (Anthropic) unterstützte am 25. Oktober 2026 bei der Anpassung des Provenienz-Workflows für offene Mitarbeit (Prüfmodi `integrity`/`current`, CODEOWNERS, Beitragsweg ohne GitHub-Konto) und den zugehörigen Dokumentationstexten. Die Änderung wurde als Pull Request zur Prüfung durch den Maintainer eingereicht; Claude ist kein kryptografischer Signierer.
+
 Projektverantwortung und die Entscheidung über eine Veröffentlichung liegen bei Claudiu Dangulea (`@intiequals1`). Git-Autorangaben und diese Erklärung sind für sich genommen kein unabhängiger kryptografischer Identitätsnachweis. Diese Datei behauptet nicht, dass jede fachliche Aussage bereits einer sachkundigen menschlichen Prüfung unterzogen wurde.
 
 ## Was die Website technisch tut

@@ -2,7 +2,9 @@
 
 ## Aktueller Stand
 
-Dieses Repository enthält eine transparente Provenienz-Pipeline mit ML-DSA-65-Signierung und Verifikation. Die kryptografische Attestierung ist **noch nicht aktiviert**: Es wurde kein privater Signaturschlüssel erzeugt oder ins Repository gelegt, kein öffentlicher Schlüssel hinterlegt und keine ML-DSA-Signatur veröffentlicht. Die Aktivierung erfordert einen vom Maintainer selbst erzeugten, verschlüsselt gespeicherten Schlüssel, das unabhängige Festhalten seines Fingerabdrucks und eine erste signierte Snapshot-Attestierung. Details stehen in [`provenance/README.md`](provenance/README.md).
+Dieses Repository enthält eine transparente Provenienz-Pipeline mit ML-DSA-65-Signierung und Verifikation. Ob sie aktiv ist, zeigt der Ordner [`provenance/attestations/`](provenance/attestations/): Liegt dort mindestens ein signiertes Manifest, ist die Attestierung aktiviert; der öffentliche Schlüssel liegt unter `provenance/keys/`, sein Fingerabdruck ist zusätzlich unabhängig vom Repository verankert. Der private Schlüssel wird vom Maintainer selbst erzeugt und verschlüsselt außerhalb des Repositories verwahrt.
+
+Die Pipeline ist auf offene Mitarbeit ausgelegt: Pull Requests von allen werden nur auf die Gültigkeit vorhandener Signaturen geprüft; ein noch nicht signierter Stand blockiert keinen Beitrag. Der Maintainer signiert gemergte Stände nachträglich, das Manifest führt die Git-Autorinnen und -Autoren auf. Details stehen in [`provenance/README.md`](provenance/README.md).
 
 ## Herkunft des Website-Entwurfs
 

@@ -74,6 +74,8 @@ def main() -> int:
         now_local = datetime.now().astimezone().isoformat(timespec="seconds")
         now_utc = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
         digest = snapshot_digest(commit)
+        authors = run(["git", "log", "--format=%aN", commit]).decode("utf-8").splitlines()
+        contributors = sorted({name.strip() for name in authors if name.strip()}, key=str.casefold)
         manifest = {
             "schemaVersion": "digitalpath-provenance/v1",
             "repository": REPOSITORY,
@@ -96,11 +98,22 @@ def main() -> int:
                     "github": "intiequals1",
                     "identityNote": "Maintainer assertion; verify the public-key fingerprint independently.",
                 },
-                "aiAssistance": {
-                    "assistant": "Manus",
-                    "role": "AI-assisted development and documentation",
-                    "cryptographicSigner": False,
+                "contributors": {
+                    "gitAuthors": contributors,
+                    "note": "Git-Autorennamen bis zum attestierten Commit; Beiträge Dritter werden nach dem Merge mitsigniert. Kein Identitätsnachweis.",
                 },
+                "aiAssistance": [
+                    {
+                        "assistant": "Manus",
+                        "role": "AI-assisted development and documentation",
+                        "cryptographicSigner": False,
+                    },
+                    {
+                        "assistant": "Claude (Anthropic)",
+                        "role": "Provenienz-Workflow für offene Mitarbeit (Oktober 2026)",
+                        "cryptographicSigner": False,
+                    },
+                ],
             },
         }
         stem = f"attestation-{commit[:12]}"

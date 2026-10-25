@@ -1,9 +1,21 @@
 name: Verify ML-DSA Provenance
 
+# Offene Mitarbeit: Pull Requests von allen werden nur auf Integrität geprüft
+# (vorhandene Signaturen gültig, Schlüssel unverändert verankert). Ein noch nicht
+# signierter Stand blockiert keinen Beitrag. Der Maintainer signiert nach dem Merge.
+# Tags "attested-*" und manuelle Läufe verlangen einen attestierten aktuellen Stand.
+
 on:
   push:
+    branches: ['**']
+    tags: ['attested-*']
   pull_request:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'integrity oder current'
+        required: false
+        default: 'current'
 
 permissions:
   contents: read
@@ -23,15 +35,19 @@ jobs:
           openssl version
           python3 --version
 
-      - name: Verify signed snapshot
+      - name: Verify signed snapshots
         shell: bash
         env:
           PROVENANCE_PUBLIC_KEY_SHA256: ${{ vars.PROVENANCE_PUBLIC_KEY_SHA256 }}
+          INPUT_MODE: ${{ github.event.inputs.mode }}
         run: |
+          mode=integrity
+          if [[ "${GITHUB_REF}" == refs/tags/attested-* ]]; then mode=current; fi
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" && -n "${INPUT_MODE}" ]]; then mode="${INPUT_MODE}"; fi
           if compgen -G 'provenance/attestations/attestation-*.json' > /dev/null; then
-            python3 scripts/provenance/verify_attestations.py --require-anchor
+            python3 scripts/provenance/verify_attestations.py --require-anchor --mode "${mode}"
           else
-            echo '::warning::ML-DSA provenance is not activated. Generate and independently pin the maintainer key, then sign a snapshot.'
-            echo '## ML-DSA provenance not yet activated' >> "$GITHUB_STEP_SUMMARY"
-            echo 'No signed snapshot is present yet. See `provenance/README.md` for the one-time setup.' >> "$GITHUB_STEP_SUMMARY"
+            echo '::warning::ML-DSA provenance is not activated yet. See provenance/README.md.'
+            echo '## ML-DSA-Provenienz noch nicht aktiviert' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Noch keine signierte Attestierung vorhanden. Siehe `provenance/README.md`.' >> "$GITHUB_STEP_SUMMARY"
           fi
