@@ -22,6 +22,9 @@ body:
         - Knowledge Management Hub
         - SAP Invoice-to-PO Matching
         - Enterprise Checkout Engine
+        - DTRS
+        - humaBot
+        - CultureSync Compliance
         - Allgemeine Dokumentation
         - Noch offen
     validations:
