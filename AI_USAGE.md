@@ -14,6 +14,8 @@ Claude (Anthropic) unterstützte am 25. Oktober 2026 bei den Labor-Einträgen DT
 
 Claude (Anthropic) erstellte am 25. Oktober 2026 den Digitalen Demonstrator DP—D1 (`demonstrator/`) nach den Vorgaben von Claudiu Dangulea. Der Demonstrator verarbeitet nur Beispieldaten und Eingaben im Browser der Nutzenden; er überträgt nichts.
 
+Claude (Anthropic) unterstützte am 25. Oktober 2026 bei der Vorlage „Dialektisches Issue“ und dem Verweis auf den Konzeptentwurf „Dialectical Collaboration Network“ (Fassung 0.1, mit ChatGPT entworfen) sowie bei Verweisen in den Aufgaben-Issues der Projekt-Repositories.
+
 Projektverantwortung und die Entscheidung über eine Veröffentlichung liegen bei Claudiu Dangulea (`@intiequals1`). Git-Autorangaben und diese Erklärung sind für sich genommen kein unabhängiger kryptografischer Identitätsnachweis. Diese Datei behauptet nicht, dass jede fachliche Aussage bereits einer sachkundigen menschlichen Prüfung unterzogen wurde.
 
 ## Was die Website technisch tut

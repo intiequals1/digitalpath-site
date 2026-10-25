@@ -8,6 +8,10 @@ Pull Requests sollen den betroffenen Projektbereich, den Zweck der Änderung und
 
 Die Projektverantwortlichen entscheiden, ob ein Vorschlag öffentlich und umsetzbar ist. Eine GitHub-Mitwirkung ist keine Freigabe für den Zugriff auf interne Jira- oder Kundensysteme.
 
+## Dialektische Issues (Entwurf)
+
+Neben Aufgaben gibt es eine zweite Issue-Vorlage: das [dialektische Issue](https://github.com/intiequals1/digitalpath-site/issues/new?template=dialectical_issue.yml). Damit wird ein Problem als gemeinsamer Untersuchungsgegenstand festgehalten, mit Ausgangsposition, Kritik und Widerspruch, Vermittlung, praktischer Überprüfung und Reflexion. Grundlage ist der Konzeptentwurf [Dialectical Collaboration Network](https://www.claudiu.at/digitalpath-dialectical-collaboration-network) (Fassung 0.1, 25. Oktober 2026). Abweichende Positionen werden dokumentiert, Kritik richtet sich gegen Aussagen und nicht gegen Personen, und niemand ist verpflichtet, Ergebnisse in der eigenen Praxis umzusetzen.
+
 ## Mitwirken ohne GitHub-Konto
 
 Mitarbeit soll nicht an einem GitHub-Konto scheitern. Hinweise, Quellen, Einwände oder Aufgabenideen kannst du auch per E-Mail an [claudiu@dangulea.at](mailto:claudiu@dangulea.at?subject=Beitrag%20zum%20Digitalpath%20Projektlabor) senden. Mit deinem Einverständnis wird der Beitrag als öffentliches Issue übernommen, auf Wunsch mit Namensnennung, sonst ohne. Bitte nenne dabei den Projektbereich und ob du genannt werden möchtest; personenbezogene oder vertrauliche Inhalte werden nicht veröffentlicht.

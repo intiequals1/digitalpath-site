@@ -1,0 +1,80 @@
+name: Dialektisches Issue (Entwurf)
+description: Ein Problem gemeinsam untersuchen, mit Ausgangsposition, Widerspruch und Vermittlung (Dialectical Collaboration Network, Fassung 0.1)
+title: "[Diskurs] "
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Ein dialektisches Issue ist ein dokumentierter Gegenstand gemeinsamer Untersuchung, nicht nur eine Aufgabe.
+        Grundlage ist der Konzeptentwurf [Dialectical Collaboration Network](https://www.claudiu.at/digitalpath-dialectical-collaboration-network).
+        Fülle zuerst A bis C aus; D bis F entstehen im Verlauf der Diskussion und können später ergänzt werden.
+        Issues sind öffentlich sichtbar: keine Kunden- oder Personendaten, keine internen Links.
+  - type: dropdown
+    id: kategorie
+    attributes:
+      label: Kategorie
+      options:
+        - Praxisproblem
+        - Methodischer Widerspruch
+        - Ethische Fragestellung
+        - Technische Herausforderung
+        - Wirtschaftliche Herausforderung
+        - Innovationsmöglichkeit
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: A. Problem und Kontext
+      description: Was wurde beobachtet? Wer ist betroffen? Unter welchen Bedingungen tritt das Problem auf?
+    validations:
+      required: true
+  - type: textarea
+    id: ausgangsposition
+    attributes:
+      label: B. Ausgangsposition
+      description: Welche Erklärung oder Lösung wird zunächst vorgeschlagen? Auf welchen Annahmen beruht sie?
+    validations:
+      required: true
+  - type: textarea
+    id: kritik
+    attributes:
+      label: C. Kritik und Widerspruch
+      description: Welche Einwände bestehen? Welche Voraussetzungen könnten unzutreffend sein? Welche Interessen oder Erfahrungen bleiben unberücksichtigt?
+    validations:
+      required: true
+  - type: textarea
+    id: vermittlung
+    attributes:
+      label: D. Dialektische Vermittlung
+      description: Welche Aspekte der Positionen lassen sich bewahren, welche müssen verändert oder verworfen werden? Entsteht eine neue Handlungsoption?
+  - type: textarea
+    id: pruefung
+    attributes:
+      label: E. Praktische Überprüfung
+      description: Wie lässt sich die Erkenntnis mit begrenztem Aufwand und nachvollziehbaren Kriterien erproben?
+  - type: textarea
+    id: reflexion
+    attributes:
+      label: F. Reflexion
+      description: Was wurde gelernt? Welche Fragen bleiben offen? Unter welchen Bedingungen gilt das Ergebnis?
+  - type: checkboxes
+    id: prinzipien
+    attributes:
+      label: Diskursprinzipien
+      options:
+        - label: Kritik richtet sich gegen Aussagen, Annahmen oder Handlungen, nicht gegen Personen.
+          required: true
+        - label: Gründe und Belege sind von Behauptungen und Werturteilen unterscheidbar.
+          required: true
+        - label: Ich habe keine Kunden- oder Personendaten, internen Links oder vertraulichen Inhalte eingefügt.
+          required: true
+  - type: dropdown
+    id: ai_use
+    attributes:
+      label: KI-Unterstützung
+      options:
+        - Keine generative KI verwendet
+        - Generative KI verwendet; Werkzeug und Umfang im Issue erläutert
+    validations:
+      required: true
