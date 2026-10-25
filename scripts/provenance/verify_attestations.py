@@ -52,9 +52,26 @@ def snapshot_digest(revision: str) -> str:
     return hashlib.sha256(canonical).hexdigest()
 
 
+def write_summary(text: str) -> None:
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as handle:
+            handle.write(text + "\n")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--require-anchor", action="store_true", help="Fail unless the GitHub public-key fingerprint variable is configured.")
+    parser.add_argument(
+        "--mode",
+        choices=("integrity", "current"),
+        default="integrity",
+        help=(
+            "integrity: alle vorhandenen Attestierungen müssen gültig sein; ein noch nicht signierter aktueller Stand "
+            "ist zulässig (Beiträge Dritter werden nicht blockiert). current: zusätzlich muss der aktuelle Stand "
+            "attestiert sein (für Veröffentlichungen/Tags)."
+        ),
+    )
     args = parser.parse_args()
 
     try:
@@ -110,10 +127,18 @@ def main() -> int:
                 current_verified = True
             print(f"Gültige ML-DSA-65-Signatur: {manifest_path.name}")
 
-        if not current_verified:
-            raise SystemExit("Keine gültige Attestierung passt zum aktuellen getrackten Repository-Snapshot.")
-        print(f"Aktueller Snapshot verifiziert: {current_digest}")
         print(f"Öffentlicher Schlüssel SHA-256: {fingerprint}")
+        if current_verified:
+            print(f"Aktueller Snapshot verifiziert: {current_digest}")
+            write_summary(f"✅ Aktueller Stand ist vom Maintainer attestiert (`{current_digest[:16]}…`).")
+            return 0
+        if args.mode == "current":
+            raise SystemExit("Keine gültige Attestierung passt zum aktuellen getrackten Repository-Snapshot.")
+        print(f"Hinweis: Aktueller Snapshot noch nicht attestiert ({current_digest}); Maintainer-Signatur ausstehend.")
+        write_summary(
+            "ℹ️ Alle vorhandenen Attestierungen sind gültig. Dieser Stand ist noch nicht vom Maintainer signiert; "
+            "das blockiert keinen Beitrag. Signiert wird nach dem Merge."
+        )
         return 0
     except (subprocess.CalledProcessError, OSError, json.JSONDecodeError) as error:
         print(f"Verifikation fehlgeschlagen: {error}", file=sys.stderr)

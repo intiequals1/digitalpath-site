@@ -16,6 +16,8 @@ Dann `http://localhost:8000` im Browser öffnen. Das CSS ist direkt in `index.ht
 
 Freigegebene öffentliche Aufgaben werden im [öffentlichen GitHub-Projektboard](https://github.com/users/intiequals1/projects/6) gesammelt und als GitHub-Issues bearbeitet. Zum Eröffnen oder Kommentieren eines Issues und zum Einreichen eines Pull Requests ist ein GitHub-Konto nötig. Issue-Inhalte und Beiträge sind öffentlich. Jira bleibt intern: Aufgaben werden redigiert und nur nach ausdrücklicher Freigabe übernommen; es gibt keine automatische Jira-Synchronisierung. Lies vor dem Beitrag [`CONTRIBUTING.md`](CONTRIBUTING.md) und verwende die [öffentliche Aufgaben-Vorlage](.github/ISSUE_TEMPLATE/public_task.yml). Keine Jira-Schlüssel, internen Links oder vertraulichen Inhalte veröffentlichen.
 
+Ohne GitHub-Konto sind Beiträge per E-Mail an claudiu@dangulea.at möglich; sie werden mit Einverständnis als Issue übernommen. Für Beiträge ist kein Signaturschlüssel nötig: Pull Requests werden nur auf die Gültigkeit vorhandener Signaturen geprüft, signiert wird nach dem Merge.
+
 ## KI-Offenlegung und Provenienz
 
 Die Website wurde mit Unterstützung von Manus erstellt. Umfang und Grenzen sind in [`AI_USAGE.md`](AI_USAGE.md) dokumentiert; die Website verweist auch sichtbar auf diese Offenlegung. [`PROVENANCE.md`](PROVENANCE.md) beschreibt den Entstehungsstand und die Grenzen der Signatur. ML-DSA-65-Skripte und der GitHub-Actions-Check liegen unter `scripts/provenance/` und `.github/workflows/verify-provenance.yml`.

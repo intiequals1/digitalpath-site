@@ -1,0 +1,5 @@
+# Vertrauensbasis der Provenienz: Änderungen nur mit Freigabe des Maintainers.
+# Alle anderen Dateien sind für Beiträge aller offen; Pull Requests werden wie üblich geprüft.
+/provenance/            @intiequals1
+/scripts/provenance/    @intiequals1
+/.github/               @intiequals1
