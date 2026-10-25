@@ -8,6 +8,8 @@ Manus, ein KI-Assistent, unterstützte am 23. Oktober 2026 bei Konzept, Textentw
 
 Claude (Anthropic) unterstützte am 25. Oktober 2026 bei der Anpassung des Provenienz-Workflows für offene Mitarbeit (Prüfmodi `integrity`/`current`, CODEOWNERS, Beitragsweg ohne GitHub-Konto) und den zugehörigen Dokumentationstexten. Die Änderung wurde als Pull Request zur Prüfung durch den Maintainer eingereicht; Claude ist kein kryptografischer Signierer.
 
+Claude (Anthropic) unterstützte am 25. Oktober 2026 beim Labor-Eintrag PROTEIN HUB 24, der auf einer mit ChatGPT (OpenAI) erarbeiteten Konzeptskizze beruht, sowie bei Verweisen auf coolwebtoday.org und auf bestehende Projektseiten und Repositories.
+
 Projektverantwortung und die Entscheidung über eine Veröffentlichung liegen bei Claudiu Dangulea (`@intiequals1`). Git-Autorangaben und diese Erklärung sind für sich genommen kein unabhängiger kryptografischer Identitätsnachweis. Diese Datei behauptet nicht, dass jede fachliche Aussage bereits einer sachkundigen menschlichen Prüfung unterzogen wurde.
 
 ## Was die Website technisch tut
