@@ -12,6 +12,8 @@ Claude (Anthropic) unterstützte am 25. Oktober 2026 beim Labor-Eintrag PROTEIN 
 
 Claude (Anthropic) unterstützte am 25. Oktober 2026 bei den Labor-Einträgen DTRS, humaBot und CultureSync Compliance auf Grundlage der Projektbeschreibungen von Claudiu Dangulea sowie bei den zugehörigen Repositories und ersten öffentlichen Aufgaben.
 
+Claude (Anthropic) erstellte am 25. Oktober 2026 den Digitalen Demonstrator DP—D1 (`demonstrator/`) nach den Vorgaben von Claudiu Dangulea. Der Demonstrator verarbeitet nur Beispieldaten und Eingaben im Browser der Nutzenden; er überträgt nichts.
+
 Projektverantwortung und die Entscheidung über eine Veröffentlichung liegen bei Claudiu Dangulea (`@intiequals1`). Git-Autorangaben und diese Erklärung sind für sich genommen kein unabhängiger kryptografischer Identitätsnachweis. Diese Datei behauptet nicht, dass jede fachliche Aussage bereits einer sachkundigen menschlichen Prüfung unterzogen wurde.
 
 ## Was die Website technisch tut

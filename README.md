@@ -29,6 +29,7 @@ Wichtig: Die kryptografische Attestierung ist vorbereitet, aber noch nicht aktiv
 - `index.html` — eigenständige, responsive Startseite mit eingebettetem CSS
 - `styles.css` — separate Fassung der responsiven Gestaltung
 - `script.js` — Themenfilter und mobile Navigation
+- `demonstrator/` — Digitaler Demonstrator DP—D1 (Dokumentation und Auswertung von Journey-Beobachtungen, läuft nur im Browser)
 - `assets/` — vorhandene Projektmedien und Favicon
 - `AI_USAGE.md`, `PROVENANCE.md` — KI-Offenlegung und Herkunftshinweise
 - `CONTRIBUTING.md`, `.github/` — öffentliche Beitragsregeln, Aufgabenformular und PR-Vorlage

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1e9">
+  <meta name="description" content="Erster digitaler Demonstrator im Digitalpath-Projektlabor: Beobachtungen aus Customer Journeys freiwillig, pseudonym und nachvollziehbar dokumentieren und auswerten. Läuft nur im Browser, mit Beispieldaten.">
+  <meta property="og:title" content="Digitaler Demonstrator — Digitalpath">
+  <meta property="og:description" content="Beobachten, ohne zu bewerten: Einwilligung, Widerruf, pseudonyme Dokumentation, getrennte Deutung und aggregierte Auswertung.">
+  <meta property="og:type" content="website">
+  <title>Digitaler Demonstrator — Digitalpath</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="demonstrator.css">
+  <script src="../script.js" defer></script>
+  <script src="demonstrator.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#hauptinhalt">Zum Inhalt springen</a>
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Digitalpath Startseite">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>digital<span class="wordmark-light">path</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen"><span></span><span></span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Hauptnavigation">
+      <a href="../#labor">Projektlabor</a>
+      <a class="nav-active" href="#demonstrator" aria-current="page">Demonstrator</a>
+      <a href="../#methode">Arbeitsweise</a>
+      <a href="../#profil">Über mich</a>
+      <a class="nav-contact" href="../#kontakt">Austausch anfragen <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="hauptinhalt">
+    <section class="hero demo-hero" id="start" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>DP—D1 / Digitaler Demonstrator</p>
+        <h1 id="hero-title">Beobachten, <em>ohne zu bewerten.</em></h1>
+        <p class="hero-lead">Der erste digitale Demonstrator aus dem Vorhaben <a class="inline-link" href="https://www.coolwebtoday.org/#vorhaben" target="_blank" rel="noreferrer">Human-Centered Digital Innovation Studio&nbsp;↗</a> zeigt, wie Beobachtungen aus Customer Journeys freiwillig, pseudonym und nachvollziehbar dokumentiert und ausgewertet werden können.</p>
+        <ul class="demo-badges" aria-label="Eigenschaften">
+          <li>Demonstrator</li>
+          <li>Läuft nur in deinem Browser</li>
+          <li>Beispieldaten</li>
+          <li>Keine Übertragung</li>
+        </ul>
+      </div>
+      <aside class="stages" aria-labelledby="stages-title">
+        <p class="eyebrow" id="stages-title">Reifegrad des Vorhabens</p>
+        <ol>
+          <li><div><b>Methoden und Architektur</b><small>Modelle, Kategorien, manuelle Prototypen</small></div></li>
+          <li class="is-now" aria-current="step"><div><b>Digitaler Demonstrator</b><small>Diese Seite: Logik zum Ausprobieren, ohne Server</small></div></li>
+          <li><div><b>Pop-up-Pilot</b><small>Begrenzte Erprobung mit Partnern</small></div></li>
+          <li><div><b>Pilotstudio</b><small>Mehrere Zielgruppen, dauerhafter Betrieb</small></div></li>
+        </ol>
+        <p class="stages-note">Gebaut ist nur Stufe 02, als Demonstrator. Getestet mit Menschen ist noch nichts.</p>
+      </aside>
+    </section>
+
+    <section class="section-pad demo-section" id="demonstrator" aria-labelledby="demo-title">
+      <div class="demo-head">
+        <div><p class="eyebrow">01 / Ausprobieren</p><h2 id="demo-title">Drei Rollen, <em>eine Journey.</em></h2></div>
+        <p>Wechsle die Rolle und sieh, wer was sehen darf. Alles, was du hier eingibst, bleibt in deinem Browser. Beim ersten Öffnen sind Beispieldaten geladen.</p>
+      </div>
+
+      <div class="role-bar" role="group" aria-label="Rolle wählen">
+        <span>Du siehst den Demonstrator als</span>
+        <div class="role-group" id="roles"></div>
+      </div>
+      <p class="role-note" id="role-note" aria-live="polite"></p>
+
+      <div class="demo-layout">
+        <div>
+          <div class="tablist" role="tablist" id="tabs" aria-label="Bereiche dieser Rolle"></div>
+          <p class="status-line" id="status" role="status" aria-live="polite"></p>
+          <div class="panel" id="panel" role="tabpanel" tabindex="-1"></div>
+        </div>
+        <aside class="side" aria-labelledby="store-title">
+          <div class="card">
+            <h3 id="store-title">Datenhaltung</h3>
+            <p class="small">Logisch getrennt, beide nur im Speicher dieses Browsers.</p>
+            <div class="store" id="store"></div>
+            <div class="actions">
+              <button class="dbtn ghost" type="button" data-action="sample">Beispieldaten neu laden</button>
+              <button class="dbtn warn" type="button" data-action="wipe">Alles löschen</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Regeln im Demonstrator</h3>
+            <ul class="list">
+              <li>Ohne Einwilligung wird nichts dokumentiert.</li>
+              <li>Pseudonym statt Name; Notizen mit Namen, Kontaktdaten oder Gesundheitsangaben werden abgewiesen.</li>
+              <li>Auswertung erst ab <b>5</b> Personen mit Forschungseinwilligung je Version.</li>
+              <li>Werte unter <b>3</b> erscheinen nur als „&lt;3“.</li>
+              <li>Widerruf wirkt sofort und ohne Begründung.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="method-section section-pad demo-method" id="laborblick" aria-labelledby="look-title">
+      <div class="method-heading"><p class="eyebrow">02 / Laborblick</p><h2 id="look-title">Was gebaut ist.<br><em>Und was nicht.</em></h2><p>Der Demonstrator macht eine Logik prüfbar. Er ist kein Produkt und verarbeitet keine echten Personendaten.</p></div>
+      <div class="method-steps">
+        <article class="method-step"><span class="step-no">01</span><div><h3>Ausgangsfrage</h3><p>Wie lassen sich Unsicherheiten, Barrieren und hilfreiche Unterstützung in offenen Journeys festhalten, ohne Menschen zu bewerten und ohne mehr Daten als nötig zu erheben?</p></div><span class="step-mark">?</span></article>
+        <article class="method-step"><span class="step-no">02</span><div><h3>Annahmen &amp; Entscheidungen</h3><p>Einwilligung getrennt nach Zweck (Dokumentation, Forschung). Pseudonym statt Name. Beobachtung, Deutung und Empfehlung bleiben getrennt. Mindestzellgröße 3, Mindestzahl 5. Kategorien sind vorläufig.</p></div><span class="step-mark">↗</span></article>
+        <article class="method-step"><span class="step-no">03</span><div><h3>Quellen &amp; Umsetzung</h3><p>Statische Seite ohne Server und Konto. Daten liegen nur im localStorage deines Browsers. Rollen sind simuliert, nicht abgesichert. Die Journeys stammen von <a class="inline-link" href="https://www.coolwebtoday.org/journeys.html" target="_blank" rel="noreferrer">coolwebtoday.org&nbsp;↗</a>.</p></div><span class="step-mark">⌁</span></article>
+        <article class="method-step"><span class="step-no">04</span><div><h3>Erkenntnisse &amp; offene Punkte</h3><p>Noch offen: echte Zugriffskontrolle, Speicherort und Löschfristen, Datenschutz-Folgenabschätzung, Sicherheitsprüfung und die Prüfung der Kategorien mit Pilotgruppen. Ergebnisse mit Menschen liegen noch nicht vor.</p></div><span class="step-mark">…</span></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark footer-mark" href="../"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>digital<span class="wordmark-light">path</span></span></a><span>Digitale Systeme verständlich, nachvollziehbar und verantwortbar gestalten.</span><div class="footer-links"><a href="mailto:claudiu@dangulea.at">Kontakt</a><a href="../#labor">Projektlabor</a><a href="https://www.coolwebtoday.org" target="_blank" rel="noreferrer">coolwebtoday.org ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/AI_USAGE.md">KI-Offenlegung ↗</a><a href="#start">Nach oben ↑</a></div><small>© <span id="year">2026</span> Claudiu Dangulea · Demonstrator mit KI-Unterstützung (Claude) erstellt; Projektverantwortung: Claudiu Dangulea. Konzepte, Prototypen und validierte Ergebnisse werden als solche bezeichnet.</small></footer>
+</body>
+</html>

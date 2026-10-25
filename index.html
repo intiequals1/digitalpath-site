@@ -35,6 +35,19 @@
     .contribute-note{font:10px var(--mono);color:#718074;margin-top:16px!important}
     @media(max-width:700px){.contribute-section{padding-bottom:75px}.contribute-inner{grid-template-columns:1fr;gap:24px;padding:28px 22px}}
   </style>
+  <style>
+    .demo-teaser{padding-top:0;padding-bottom:56px}
+    .demo-teaser-inner{background:var(--ink);color:var(--paper);padding:38px clamp(22px,5vw,64px);display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;align-items:center}
+    .demo-teaser .eyebrow{color:#b2c3ae;margin-bottom:15px}
+    .demo-teaser h2{font:600 clamp(30px,3.6vw,44px)/1.08 var(--display);letter-spacing:-2px;margin:0}
+    .demo-teaser h2 em{font-family:var(--serif);font-weight:400;letter-spacing:-1.5px;color:var(--accent)}
+    .demo-teaser-copy{max-width:590px}
+    .demo-teaser-copy p{font-size:12px;line-height:1.8;color:#bbc5bb;margin:0 0 14px}
+    .demo-teaser-copy .demo-teaser-note{font:10px var(--mono);color:#9fb39b;letter-spacing:.4px}
+    .demo-teaser .button{background:var(--accent);color:var(--ink);margin-top:6px}
+    .demo-teaser .button:hover{background:#d0f692}
+    @media(max-width:700px){.demo-teaser{padding-bottom:40px}.demo-teaser-inner{grid-template-columns:1fr;gap:20px;padding:28px 22px}}
+  </style>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -130,6 +143,17 @@
       <p class="lab-footnote"><span class="footnote-icon">i</span> Projektname und Themenzuordnung sind eine Orientierung. Ein Konzept ist kein validiertes Ergebnis — jeder dokumentierte Stand wird als solcher gekennzeichnet.</p>
     </section>
 
+    <section class="demo-teaser section-pad" id="demonstrator" aria-labelledby="demo-teaser-title">
+      <div class="demo-teaser-inner">
+        <div><p class="eyebrow">DP—D1 / Digitaler Demonstrator</p><h2 id="demo-teaser-title">Beobachten, <em>ohne zu bewerten.</em></h2></div>
+        <div class="demo-teaser-copy">
+          <p>Der erste digitale Demonstrator aus dem Vorhaben Human-Centered Digital Innovation Studio: Einwilligung und Widerruf, pseudonyme Beobachtungen entlang einer Journey, getrennte Deutung, versionierte Entscheidungen und eine Auswertung, aus der niemand erkennbar wird.</p>
+          <p class="demo-teaser-note">Läuft nur im Browser · Beispieldaten · keine Übertragung</p>
+          <a class="button" href="demonstrator/">Demonstrator öffnen <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="contribute-section section-pad" id="mitmachen" aria-labelledby="contribute-title">
       <div class="contribute-inner">
         <div><p class="eyebrow">Offene Zusammenarbeit</p><h2 id="contribute-title">Eine gute Aufgabe?<br><em>Mach mit.</em></h2></div>
@@ -165,6 +189,6 @@
     </section>
   </main>
 
-  <footer class="site-footer"><a class="wordmark footer-mark" href="#start"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>digital<span class="wordmark-light">path</span></span></a><span>Digitale Systeme verständlich, nachvollziehbar und verantwortbar gestalten.</span><div class="footer-links"><a href="mailto:claudiu@dangulea.at">Kontakt</a><a href="https://www.dangulea.at" target="_blank" rel="noreferrer">dangulea.at ↗</a><a href="https://www.coolwebtoday.org" target="_blank" rel="noreferrer">coolwebtoday.org ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/AI_USAGE.md">KI-Offenlegung ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/PROVENANCE.md">Provenienz ↗</a><a href="#start">Nach oben ↑</a></div><small>© <span id="year">2026</span> Claudiu Dangulea · Mit KI-Unterstützung von Manus erstellt; Projektverantwortung: Claudiu Dangulea. Konzepte, Prototypen und validierte Ergebnisse werden als solche bezeichnet.</small></footer>
+  <footer class="site-footer"><a class="wordmark footer-mark" href="#start"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>digital<span class="wordmark-light">path</span></span></a><span>Digitale Systeme verständlich, nachvollziehbar und verantwortbar gestalten.</span><div class="footer-links"><a href="mailto:claudiu@dangulea.at">Kontakt</a><a href="demonstrator/">Demonstrator</a><a href="https://www.dangulea.at" target="_blank" rel="noreferrer">dangulea.at ↗</a><a href="https://www.coolwebtoday.org" target="_blank" rel="noreferrer">coolwebtoday.org ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/AI_USAGE.md">KI-Offenlegung ↗</a><a href="https://github.com/intiequals1/digitalpath-site/blob/main/PROVENANCE.md">Provenienz ↗</a><a href="#start">Nach oben ↑</a></div><small>© <span id="year">2026</span> Claudiu Dangulea · Mit KI-Unterstützung von Manus erstellt; Projektverantwortung: Claudiu Dangulea. Konzepte, Prototypen und validierte Ergebnisse werden als solche bezeichnet.</small></footer>
 </body>
 </html>
