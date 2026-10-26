@@ -10,9 +10,6 @@
   <meta property="og:type" content="website">
   <title>Digitalpath — Projektlabor für digitale Systeme</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
 @charset "UTF-8";
 :root{--paper:#f3f1e9;--paper-deep:#e8e5d9;--ink:#202c2a;--muted:#68716d;--line:#d4d4c8;--accent:#b9ef61;--accent-dark:#42652e;--blue:#cadcd5;--serif:Georgia,"Times New Roman",serif;--sans:"DM Sans",Arial,sans-serif;--display:Manrope,"DM Sans",Arial,sans-serif;--mono:"DM Mono",monospace;--page:1320px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}.skip-link{position:absolute;left:12px;top:-60px;background:var(--accent);padding:10px 14px;z-index:99}.skip-link:focus{top:12px}.site-header{height:82px;padding:0 max(6vw,24px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(32,44,42,.13);position:sticky;top:0;z-index:10;background:rgba(243,241,233,.93);backdrop-filter:blur(16px)}.wordmark{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-size:21px;font-weight:800;letter-spacing:-1.1px}.wordmark-light{font-weight:500;color:#78827a}.brand-mark{width:25px;height:24px;display:inline-flex;align-items:flex-end;gap:3px;transform:skew(-22deg)}.brand-mark i{display:block;width:5px;border-radius:4px;background:#6a9450}.brand-mark i:nth-child(1){height:12px}.brand-mark i:nth-child(2){height:19px}.brand-mark i:nth-child(3){height:24px;background:#a4d454}.primary-nav{display:flex;align-items:center;gap:38px;font-size:13px;font-weight:600}.primary-nav>a{transition:color .2s ease}.primary-nav>a:hover{color:var(--accent-dark)}.primary-nav .nav-active{position:relative}.nav-active:after{content:"";position:absolute;bottom:-30px;left:0;width:100%;height:2px;background:#77965c}.primary-nav .nav-contact{padding:10px 14px;border:1px solid var(--line);border-radius:2px}.nav-contact span{margin-left:8px}.menu-toggle{display:none}
@@ -48,6 +45,29 @@
     .demo-teaser .button:hover{background:#d0f692}
     @media(max-width:700px){.demo-teaser{padding-bottom:40px}.demo-teaser-inner{grid-template-columns:1fr;gap:20px;padding:28px 22px}}
   </style>
+  <style>
+    .journey-section{padding-top:76px;padding-bottom:96px;background:#e8e9df}
+    .journey-section .section-heading{margin-bottom:28px}
+    .journey-price-note{margin:0 0 28px;padding:14px 16px;border:1px solid #c9cec4;background:rgba(243,241,233,.55);color:#59645d;font-size:11px;line-height:1.75}
+    .journey-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line)}
+    .journey-card{min-height:265px;padding:20px 18px 17px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;background:var(--paper)}
+    .journey-status{display:flex;align-items:center;gap:8px;margin:0 0 18px;color:#52634f;font:9px var(--mono);letter-spacing:.35px;text-transform:uppercase}
+    .journey-status .pulse{width:6px;height:6px;margin:0}
+    .journey-card h3{font:700 21px/1.15 var(--display);letter-spacing:-.6px;margin:0 0 11px}
+    .journey-meta{margin:0 0 7px;color:#657069;font-size:10px;line-height:1.6}
+    .journey-summary{margin:10px 0 16px;color:#69716c;font-size:11px;line-height:1.7}
+    .journey-price{margin:auto 0 13px;padding-top:11px;border-top:1px solid var(--line);font-size:11px;line-height:1.55}
+    .journey-price strong{display:block;font-size:14px;color:var(--ink)}
+    .journey-price span{display:block;color:#69716c;font-size:9px}
+    .journey-action{margin-top:auto}
+    .journey-action .button{width:100%;justify-content:space-between;gap:12px;font-size:10px;padding:12px 13px}
+    .journey-card--soon{background:#f0eee3}
+    .journey-card--soon .journey-status{color:#757c75}
+    .journey-card--soon .journey-status .pulse{background:#a8aaa2;box-shadow:0 0 0 4px rgba(120,128,117,.12)}
+    .journey-unavailable{margin:auto 0 0;padding-top:11px;border-top:1px solid var(--line);color:#747c75;font:9px var(--mono);text-transform:uppercase;letter-spacing:.35px}
+    @media(max-width:1000px){.journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:700px){.journey-section{padding-top:62px;padding-bottom:75px}.journey-grid{grid-template-columns:1fr}.journey-card{min-height:235px;padding:17px 15px}}
+  </style>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -60,6 +80,7 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen"><span></span><span></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Hauptnavigation">
       <a class="nav-active" href="#labor">Projektlabor</a>
+      <a href="#journeys">Journeys</a>
       <a href="#mitmachen">Mitwirken</a>
       <a href="#methode">Arbeitsweise</a>
       <a href="#profil">Über mich</a>
@@ -84,6 +105,76 @@
         <div class="art-caption"><span>Komplexität sichtbar machen</span><span class="caption-index">01 / 04</span></div>
       </div>
       <div class="hero-bottom"><span>Digitalpath / unabhängiges Projektlabor</span><span>Standort: an der Schnittstelle</span></div>
+    </section>
+
+    <section class="journey-section section-pad" id="journeys" aria-labelledby="journeys-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Begleitete Einstiege</p><h2 id="journeys-title">Vom Gedanken zum <em>nächsten Schritt.</em></h2></div>
+        <p class="section-intro">Die Journeys bieten eine zeitlich begrenzte Begleitung für konkrete Vorhaben. Die offenen Aufgaben im Projektlabor bleiben unabhängig davon kostenlos zugänglich.</p>
+      </div>
+      <p class="journey-price-note"><strong>Preishinweis:</strong> Der ausgewiesene Betrag ist der Mindestpreis pro Person; eine freiwillige höhere Zahlung ist möglich. Über die Schaltfläche kannst du den Gumroad-Kaufbutton anfragen. Ich prüfe deine Anfrage und sende dir den Button nach meiner Freigabe. Kauf und Zahlung erfolgen danach im Gumroad-Checkout. Rücktrittsfragen und -erklärungen bearbeite ich persönlich; du erreichst mich unter <a href="mailto:claudiu@dangulea.at">claudiu@dangulea.at</a>. Informationen zu Gumroads Rückerstattungsanfragen findest du in der <a class="text-link" href="https://gumroad.com/help/article/190-how-do-i-get-a-refund" target="_blank" rel="noreferrer">Gumroad-Kaufhilfe <span aria-hidden="true">↗</span></a>.</p>
+      <div class="journey-grid">
+        <article class="journey-card">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>Gumroad-Kaufbutton auf Anfrage</p>
+          <h3>Eine Idee klären</h3>
+          <p class="journey-meta">Ca. 2 Stunden · einzeln oder in einer Kleingruppe</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du erstellst einen Steckbrief deiner Idee und wählst einen ersten Schritt, den du in einer Woche schaffen kannst.</p>
+          <p class="journey-price"><strong>105&nbsp;€ Mindestpreis</strong><span>pro Person</span></p>
+          <div class="journey-action"><a class="button button-dark" href="mailto:claudiu@dangulea.at?subject=Kaufbutton%20anfragen%3A%20Journey%20Eine%20Idee%20kl%C3%A4ren&amp;body=Bitte%20sende%20mir%20nach%20deiner%20Freigabe%20den%20Gumroad-Kaufbutton.%0A%0AGew%C3%BCnschter%20Termin%2FZeitraum%20und%20Format%3A%0A%0AMein%20Name%3A">Gumroad-Kaufbutton anfragen</a></div>
+        </article>
+        <article class="journey-card">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>Gumroad-Kaufbutton auf Anfrage</p>
+          <h3>Mit KI an der eigenen Idee arbeiten</h3>
+          <p class="journey-meta">Ca. 3 Stunden · einzeln oder in einer Kleingruppe</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du formulierst einen klaren Auftrag, vergleichst lokale und Online-Werkzeuge und prüfst die Ergebnisse selbst.</p>
+          <p class="journey-price"><strong>155&nbsp;€ Mindestpreis</strong><span>pro Person</span></p>
+          <div class="journey-action"><a class="button button-dark" href="mailto:claudiu@dangulea.at?subject=Kaufbutton%20anfragen%3A%20Journey%20Mit%20KI%20an%20der%20eigenen%20Idee%20arbeiten&amp;body=Bitte%20sende%20mir%20nach%20deiner%20Freigabe%20den%20Gumroad-Kaufbutton.%0A%0AGew%C3%BCnschter%20Termin%2FZeitraum%20und%20Format%3A%0A%0AMein%20Name%3A">Gumroad-Kaufbutton anfragen</a></div>
+        </article>
+        <article class="journey-card">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>Gumroad-Kaufbutton auf Anfrage</p>
+          <h3>Einen wiederkehrenden Ablauf automatisieren</h3>
+          <p class="journey-meta">Ca. 3 Stunden · einzeln oder in einer Kleingruppe</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du baust einen kleinen Ablauf mit Beispieldaten und hältst fest, wo die Grenzen des Werkzeugs liegen.</p>
+          <p class="journey-price"><strong>155&nbsp;€ Mindestpreis</strong><span>pro Person</span></p>
+          <div class="journey-action"><a class="button button-dark" href="mailto:claudiu@dangulea.at?subject=Kaufbutton%20anfragen%3A%20Journey%20Einen%20wiederkehrenden%20Ablauf%20automatisieren&amp;body=Bitte%20sende%20mir%20nach%20deiner%20Freigabe%20den%20Gumroad-Kaufbutton.%0A%0AGew%C3%BCnschter%20Termin%2FZeitraum%20und%20Format%3A%0A%0AMein%20Name%3A">Gumroad-Kaufbutton anfragen</a></div>
+        </article>
+        <article class="journey-card">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>Gumroad-Kaufbutton auf Anfrage</p>
+          <h3>Aus Daten eine Antwort gewinnen</h3>
+          <p class="journey-meta">Ca. 2,5 Stunden · einzeln oder in einer Kleingruppe</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du beantwortest eine konkrete Frage an deine Daten und stellst das Ergebnis in einem Diagramm dar.</p>
+          <p class="journey-price"><strong>130&nbsp;€ Mindestpreis</strong><span>pro Person</span></p>
+          <div class="journey-action"><a class="button button-dark" href="mailto:claudiu@dangulea.at?subject=Kaufbutton%20anfragen%3A%20Journey%20Aus%20Daten%20eine%20Antwort%20gewinnen&amp;body=Bitte%20sende%20mir%20nach%20deiner%20Freigabe%20den%20Gumroad-Kaufbutton.%0A%0AGew%C3%BCnschter%20Termin%2FZeitraum%20und%20Format%3A%0A%0AMein%20Name%3A">Gumroad-Kaufbutton anfragen</a></div>
+        </article>
+        <article class="journey-card journey-card--soon">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>In Vorbereitung</p>
+          <h3>Wissen zur Idee ordnen</h3>
+          <p class="journey-meta">Ca. 2 Stunden · einzeln oder in einer Kleingruppe</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du ordnest Notizen und Quellen an einem Ort und machst sie für die Zusammenarbeit zugänglich.</p>
+          <p class="journey-unavailable">Noch nicht kaufbar</p>
+        </article>
+        <article class="journey-card journey-card--soon">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>In Vorbereitung</p>
+          <h3>Einen klickbaren Prototyp bauen und testen</h3>
+          <p class="journey-meta">Ca. 4 Stunden · zwei Termine mit etwa einer Woche Abstand</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du erstellst einen klickbaren Entwurf, lässt ihn von zwei Menschen ausprobieren und entscheidest, was du ändern willst.</p>
+          <p class="journey-unavailable">Noch nicht kaufbar</p>
+        </article>
+        <article class="journey-card journey-card--soon">
+          <p class="journey-status"><span class="pulse" aria-hidden="true"></span>In Vorbereitung</p>
+          <h3>Die eigene Arbeit mitgestalten</h3>
+          <p class="journey-meta">Ca. 3 Stunden · einzeln oder in einer Kleingruppe</p>
+          <p class="journey-meta">Online oder vor Ort nach Vereinbarung</p>
+          <p class="journey-summary">Du beschreibst deinen Ablauf und entscheidest selbst, wo Technik unterstützen oder automatisieren soll.</p>
+          <p class="journey-unavailable">Noch nicht kaufbar</p>
+        </article>
+      </div>
     </section>
 
     <section class="lab-section section-pad" id="labor" aria-labelledby="lab-title">

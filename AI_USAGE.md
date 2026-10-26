@@ -35,3 +35,23 @@ Quellen: [EU-Kommission: Transparenzregeln](https://digital-strategy.ec.europa.e
 Wer einen Issue oder Pull Request mit generativer KI vorbereitet, soll das verwendete Werkzeug beziehungsweise Modell (soweit bekannt), den Umfang der KI-Unterstützung und die betroffenen Dateien nennen. Beitragende bleiben für Quellen, Tatsachenbehauptungen, Rechte an eingereichten Inhalten und die Prüfung ihres Beitrags verantwortlich. Bitte gib keine vertraulichen Informationen, personenbezogenen Daten oder internen Jira-IDs, Jira-Links und Jira-Beschreibungen in öffentliche Issues oder externe KI-Dienste ein.
 
 Jira bleibt intern. Nur ausdrücklich freigegebene, redigierte Aufgaben werden als öffentliche GitHub-Issues bereitgestellt; diese Repository-Vorlage ist keine automatische Jira-Synchronisierung.
+
+
+## Ergänzung vom 26. Oktober 2026
+
+Manus unterstützte bei der Erstellung einer lokalen, nicht veröffentlichten Journey-Sektion mit Produktbeschreibungen, Mindestpreisen und Links zu vier bereits öffentlichen Gumroad-Angeboten. Drei noch nicht veröffentlichte Angebote sind ausdrücklich als „Noch nicht kaufbar“ gekennzeichnet. Die Formulierungen stellen Nutzen und Ergebnis der Angebote in den Mittelpunkt. Die Preise, Steuern, Anbieterinformationen und Verbraucherinformationen bleiben vor einer Veröffentlichung zu prüfen; die FAGG-Recherche ist keine Rechtsberatung. Es wurden keine Käufe, Nachrichten, Veröffentlichungen oder Änderungen an Konten ausgelöst.
+
+
+Am 26. Oktober 2026 unterstützte Manus außerdem bei der lokalen Ergänzung der vom Betreiber angegebenen Kontaktadresse claudiu@dangulea.at für Rücktrittsfragen sowie bei der Prüfung von Gumroads Steuer- und Kaufablauf. Die sichtbare Journey-Sektion zeigt keine Steuerzeile; der Gumroad-Checkout selbst kann weiterhin VAT ausweisen. Gumroad-Einstellungen wurden nicht geändert, es wurde keine Zahlung ausgelöst und die Seite wurde nicht veröffentlicht. Die Prüfung zu Steuerbehandlung und Rücktrittsrecht ist keine Rechts- oder Steuerberatung.
+
+
+Am 26. Oktober 2026 ersetzte Manus auf Betreiberwunsch die vier direkten Gumroad-Produktlinks in der lokalen Journey-Vorschau durch produktspezifische E-Mail-Anfragen an claudiu@dangulea.at. Die Anfrage bittet darum, den Gumroad-Kaufbutton erst nach Claudius persönlicher Freigabe zu senden. Die Gumroad-Angebote bleiben selbst veröffentlicht und können weiterhin direkt auf Gumroad gekauft werden; die Website-Anfrage ist daher keine technische Kauf-Sperre. Die drei nicht veröffentlichten Produkte bleiben ohne Anfragebutton. Gumroad-Steuer-/Kontoeinstellungen wurden nicht geändert; die Website wurde nicht veröffentlicht.
+
+
+## Veröffentlichungsnachtrag vom 26. Oktober 2026
+
+Nach Freigabe durch den Betreiber wurde die Journey-Sektion in `index.html` auf `www.digitalpath.at` veröffentlicht. Sie zeigt vier begleitete Einstiegsangebote mit Mindestpreisen pro Person und vier Schaltflächen, die eine E-Mail-Anfrage an claudiu@dangulea.at öffnen. Nach eigener Prüfung kann der Betreiber den Gumroad-Kaufbutton persönlich freigeben und versenden. Drei weitere Journeys sind als „Noch nicht kaufbar“ gekennzeichnet.
+
+Die E-Mail-Anfrage ist keine technische Kaufsperre im Gumroad-Checkout: Die vier Gumroad-Angebote bleiben über ihre öffentlichen Produktseiten direkt kaufbar. Die Website zeigt auf Betreiberwunsch keine Umsatzsteuerzeile; Gumroad kann im Checkout dennoch VAT ausweisen. Die steuerliche Einordnung sowie die FAGG-Anforderungen an Rücktritt und vorzeitigen Leistungsbeginn sind damit nicht bestätigt; dieser Eintrag ist keine Rechts- oder Steuerberatung.
+
+Die privaten E-Mail-Antwortvorlagen und das Verkaufsjournal wurden nicht in dieses öffentliche Repository aufgenommen. Gumroad-Produkte, Kontoeinstellungen und die Nachkauf-Automation wurden nicht geändert; durch diese Veröffentlichung wurde keine Zahlung ausgelöst. Die vorangehenden Einträge dokumentieren den jeweils früheren Arbeitsstand vor dieser Freigabe.
