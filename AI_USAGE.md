@@ -55,3 +55,6 @@ Nach Freigabe durch den Betreiber wurde die Journey-Sektion in `index.html` auf 
 Die E-Mail-Anfrage ist keine technische Kaufsperre im Gumroad-Checkout: Die vier Gumroad-Angebote bleiben über ihre öffentlichen Produktseiten direkt kaufbar. Die Website zeigt auf Betreiberwunsch keine Umsatzsteuerzeile; Gumroad kann im Checkout dennoch VAT ausweisen. Die steuerliche Einordnung sowie die FAGG-Anforderungen an Rücktritt und vorzeitigen Leistungsbeginn sind damit nicht bestätigt; dieser Eintrag ist keine Rechts- oder Steuerberatung.
 
 Die privaten E-Mail-Antwortvorlagen und das Verkaufsjournal wurden nicht in dieses öffentliche Repository aufgenommen. Gumroad-Produkte, Kontoeinstellungen und die Nachkauf-Automation wurden nicht geändert; durch diese Veröffentlichung wurde keine Zahlung ausgelöst. Die vorangehenden Einträge dokumentieren den jeweils früheren Arbeitsstand vor dieser Freigabe.
+
+
+Am 26. Oktober 2026 änderte Manus auf Betreiberwunsch die vier Journey-Schaltflächen von „Gumroad-Kaufbutton anfragen“ zu „Anfrage senden“ und formulierte die vorausgefüllten Anfrage-E-Mails passend zum jeweiligen Journey-Ziel. Die private Sammlung der vier Freigabe-Antworten wurde ebenfalls inhaltlich auf die jeweilige Journey abgestimmt; sie wird nicht automatisch versendet und ist nicht Teil des öffentlichen Repositorys.
