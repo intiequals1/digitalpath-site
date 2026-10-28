@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "digitalpath-provenance/v1",
+  "repository": "https://github.com/intiequals1/digitalpath-site",
+  "createdAtUtc": "2026-10-28T08:32:01Z",
+  "createdAtLocal": "2026-10-28T09:32:01+01:00",
+  "signature": {
+    "algorithm": "ML-DSA-65",
+    "context": "DigitalpathProvenanceV1",
+    "publicKeyFingerprintSha256": "9808028e534cb3a3b2d9205c0516ba015af1daf10f06c69af05c20ee1cae2d60"
+  },
+  "subject": {
+    "commit": "14b3e6650a43ca0df934baf7a427d97972a316fa",
+    "gitTree": "677376e1d9db9d41de849e22f4fbba656dd27e23",
+    "trackedContentSha256": "1d41ceb301ea5f10fa73c28297d38929d80ae423cdcc50eca00a032b7327e8e1",
+    "digestScope": "Canonical SHA-256 list of tracked file paths, modes and blob hashes, excluding provenance/attestations/**."
+  },
+  "attribution": {
+    "humanMaintainerClaim": {
+      "name": "Claudiu Dangulea",
+      "github": "intiequals1",
+      "identityNote": "Maintainer assertion; verify the public-key fingerprint independently."
+    },
+    "contributors": {
+      "gitAuthors": [
+        "Claude",
+        "Claudiu Dangulea"
+      ],
+      "note": "Git-Autorennamen bis zum attestierten Commit; Beiträge Dritter werden nach dem Merge mitsigniert. Kein Identitätsnachweis."
+    },
+    "aiAssistance": [
+      {
+        "assistant": "Manus",
+        "role": "AI-assisted development and documentation",
+        "cryptographicSigner": false
+      },
+      {
+        "assistant": "Claude (Anthropic)",
+        "role": "Provenienz-Workflow für offene Mitarbeit (Oktober 2026)",
+        "cryptographicSigner": false
+      }
+    ]
+  }
+}
