@@ -19,3 +19,6 @@
 
 /* Datenschutzhinweis (script.js): Information ohne Einwilligungsabfrage */
 .privacy-notice{position:fixed;z-index:60;right:16px;bottom:16px;left:16px;max-width:520px;margin-left:auto;padding:16px 18px;background:#fbfaf5;color:var(--ink);border:1px solid var(--line);border-left:4px solid #77965c;box-shadow:0 10px 28px rgba(32,44,42,.14);font-size:13px;line-height:1.6}.privacy-notice p{margin:0 0 12px}.privacy-notice-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:16px}.privacy-notice-actions a{border-bottom:1px solid #a1af9c;font-weight:600}.privacy-notice-actions a:hover{color:var(--accent-dark)}.privacy-notice-actions button{font:700 12px var(--sans);padding:11px 16px;border:0;background:var(--ink);color:var(--paper);cursor:pointer}.privacy-notice-actions button:hover{background:#40564c}@media print{.privacy-notice{display:none}}
+
+/* Hinweis zum Entwicklungsstand */
+.site-notice{border-bottom:1px solid var(--line);background:var(--paper-deep);color:var(--muted);font-size:12px;line-height:1.6;padding:9px max(6vw,24px)}.site-notice p{max-width:var(--page);margin:0 auto}.site-notice strong{color:var(--ink)}
