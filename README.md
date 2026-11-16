@@ -28,11 +28,13 @@ Wichtig: Die kryptografische Attestierung ist vorbereitet, aber noch nicht aktiv
 
 - `index.html` — eigenständige, responsive Startseite mit eingebettetem CSS
 - `styles.css` — separate Fassung der responsiven Gestaltung
-- `script.js` — Themenfilter und mobile Navigation
+- `script.js` — Themenfilter, mobile Navigation und Datenschutzhinweis
 - `demonstrator/` — Digitaler Demonstrator DP—D1 (Dokumentation und Auswertung von Journey-Beobachtungen, läuft nur im Browser)
-- `assets/` — vorhandene Projektmedien und Favicon
+- `assets/` — vorhandene Projektmedien, Favicon und lokale Webfonts (`assets/fonts/`, OFL-Lizenzen)
+- `fonts.css` — `@font-face`-Regeln für die lokalen Webfonts
+- `impressum.html`, `datenschutz.html` — Impressum und Datenschutzerklärung
 - `AI_USAGE.md`, `PROVENANCE.md` — KI-Offenlegung und Herkunftshinweise
 - `CONTRIBUTING.md`, `.github/` — öffentliche Beitragsregeln, Aufgabenformular und PR-Vorlage
 - `scripts/provenance/`, `provenance/` — Schlüssel-, Signatur- und Verifikationsablauf
 
-Der Entwurf ist ohne Framework und Build-Schritt gehalten. Die Webfonts werden von Google Fonts geladen; bei Offline-Nutzung greifen System-Schriftalternativen. Die Themenfelder und Projektnamen stammen aus der bestehenden Digitalpath-Seite. Projektstände und Funktionen werden nicht behauptet, wenn dafür noch keine freigegebene Dokumentation vorliegt. Vor einer Live-Schaltung müssen die jeweiligen Projektdetails geprüft werden.
+Der Entwurf ist ohne Framework und Build-Schritt gehalten. Die Webfonts (DM Sans, Manrope, DM Mono) liegen seit 16.11.2026 unter `assets/fonts/` und werden über `fonts.css` von der eigenen Domain geladen; es werden keine Google-Fonts-Server kontaktiert. `impressum.html` und `datenschutz.html` enthalten die Rechtsangaben; `script.js` zeigt einen Datenschutzhinweis ohne Einwilligungsabfrage. Änderungen und Gründe stehen in `CHANGELOG.md`. Die Themenfelder und Projektnamen stammen aus der bestehenden Digitalpath-Seite. Projektstände und Funktionen werden nicht behauptet, wenn dafür noch keine freigegebene Dokumentation vorliegt. Vor einer Live-Schaltung müssen die jeweiligen Projektdetails geprüft werden.

@@ -37,3 +37,27 @@ navigation.querySelectorAll("a").forEach((link) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+/* Datenschutzhinweis: informiert und fragt keine Einwilligung ab, weil Digitalpath keine Cookies,
+   kein Tracking und keine externen Dienste nutzt. Gespeichert wird nur, dass der Hinweis geschlossen
+   wurde (Schlüssel NOTICE_KEY, beschrieben in datenschutz.html; § 165 Abs. 3 TKG 2021). */
+const NOTICE_KEY = "dp.datenschutzhinweis.v1";
+(() => {
+  let closed = null;
+  try { closed = window.localStorage.getItem(NOTICE_KEY); } catch { closed = null; }
+  if (closed === "geschlossen") return;
+  const box = document.createElement("aside");
+  box.className = "privacy-notice";
+  box.setAttribute("aria-label", "Datenschutzhinweis");
+  box.innerHTML = "<p>Digitalpath setzt keine Cookies und kein Tracking ein und lädt keine externen Dienste. "
+    + "Der Demonstrator speichert Eingaben nur in deinem Browser. Schließt du diesen Hinweis, wird nur das in deinem Browser vermerkt.</p>"
+    + '<div class="privacy-notice-actions"><a href="/datenschutz.html">Datenschutz</a>'
+    + '<button type="button">Verstanden</button></div>';
+  document.body.appendChild(box);
+  document.body.style.paddingBottom = `${box.offsetHeight + 24}px`;
+  box.querySelector("button").addEventListener("click", () => {
+    try { window.localStorage.setItem(NOTICE_KEY, "geschlossen"); } catch { /* nur für diesen Aufruf */ }
+    box.remove();
+    document.body.style.paddingBottom = "";
+  });
+})();

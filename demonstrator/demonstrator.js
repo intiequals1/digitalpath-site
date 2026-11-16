@@ -867,13 +867,15 @@
   function init() {
     B = load(KEY_B); O = load(KEY_O);
     let fresh = false;
-    if (!B || !O || B.schema !== 1 || O.schema !== 1) { sampleState(); persist(); fresh = true; }
+    /* Beispieldaten nur im Arbeitsspeicher: Der Browser-Speicher wird erst bei einer eigenen Aktion
+       beschrieben, nicht schon beim bloßen Aufruf der Seite. */
+    if (!B || !O || B.schema !== 1 || O.schema !== 1) { sampleState(); fresh = true; }
     document.addEventListener("click", onClick);
     document.addEventListener("change", onChange);
     document.addEventListener("input", onInput);
     document.addEventListener("submit", onSubmit);
     render();
-    if (fresh) setStatus("Beispieldaten geladen. Alles bleibt in diesem Browser.");
+    if (fresh) setStatus("Beispieldaten geladen. Gespeichert wird erst, wenn du etwas änderst, und nur in diesem Browser.");
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
